@@ -1,7 +1,6 @@
 import React, { createContext, useReducer, useEffect } from 'react'
 import AppReducer from './AppReducer'
 import { firestore } from '../firebase/firebase'
-import { AddTodo } from '../components/AddTodo/AddTodo'
 
 const initialState = {
     todos: [],
@@ -26,9 +25,7 @@ export const GlobalProvider = (props) => {
         } else if (!state.user) {
             const localTodos = localStorage.getItem('todo')
             updateTodo(JSON.parse(localTodos))
-
         }
-
     }, [state.user])
 
     useEffect(() => {

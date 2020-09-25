@@ -6,7 +6,6 @@ import Signup from './components/Signup/Signup'
 import Signin from './components/Signin/Signin'
 import { auth, createUserDocument } from './firebase/firebase'
 import './App.css';
-import { AddTodo } from './components/AddTodo/AddTodo';
 
 function App() {
 
